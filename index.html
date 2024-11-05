@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiSquare</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="parallax.js"></script>
+    <script src="jquery.countdown.min.js"></script>
+    <script src="https://kit.fontawesome.com/b1aac800df.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="bg.png">
+        <div class="slide-content">
+            <!-- <h1>Inviting devs worldwide</h1> -->
+            <div id="countdown" class="countdown"></div> <!-- Countdown clock -->
+            <div class="arrow"><i class="fas fa-caret-down"></i></div>
+        </div>
+    </div>
+    
+    <section class="info">
+        <div class="dynamic-text">
+            <span id="ai-wordcloud" class="typeing"></span>
+        </div>
+        <br/>
+        <div class="contact-content">
+            <div class="column">
+                <h2 class="montserrat-light">Get in Touch</h2>
+                <div class="contact-info">
+                    <p class="montserrat-regular"><a href="mailto:jatin@opengrowth.com">humans[at]opengrowth[dot]com</a></p>
+                    <p class="montserrat-regular"><a href="https://forms.gle/8bzsmkkRti25GWaZ9" target="_blank">Apply To Join Us</a></p>
+                </div>
+            </div>
+            <div class="column">
+                <h2 class="montserrat-light">Platforms</h2>
+                <p class="montserrat-regular"><a href="http://uat.mathpremierleague.ai/app/home">Math Premier League</a></p>
+            </div>
+            <div class="column">
+                <h2 class="montserrat-light">Events</h2>
+                <p class="montserrat-regular"><a href="https://speedathon.aisquare.com/" target="_blank">Speedathon Tryst'24</a></p>
+                <p class="montserrat-regular"><a href="https://www.tryst-iitd.org/events/Hack4Purpose" target="_blank">Hack4Purpose Tryst'24</a></p>
+            </div>
+        </div>
+        <div class="communities">
+            <h2 class="montserrat-light">Communities</h2>
+            <a href="https://discord.gg/3FmKpS8jGD" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://opengrowth.mn.co/landing?space_id=13969549" target="_blank"><i class="fas fa-network-wired"></i></a> <!-- Placeholder icon for Mighty Networks -->
+            <a href="https://discord.gg/9ePhVxzqKe" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://aisquare.substack.com/" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+    
+    <section class="parallax-window" data-parallax="scroll" data-image-src="bg.png">
+        <div class="slide-content">
+            <div class="coming-soon">Play. Learn. Earn.</div> <!-- Coming soon text -->
+        </div>
+    </section>
+    <!-- Affiliation and Information Section -->
+    <section class="affiliation-info">
+        <div class="affiliation-content">
+            <div class="column">
+                <h2 class="montserrat-light">Affiliation</h2>
+                <p class="montserrat-regular">
+                    AISquare is affiliated with the Dynamic Coalition on Gaming for Purpose (DC-G4P) which is recognised by the Internet Governance Forum Secretariat.
+                </p>
+                <h3 class="montserrat-bold">About G4P:</h3>
+                <p class="montserrat-regular">
+                    G4P is a growing movement that is using gaming to address real-world challenges and make a positive impact on society.
+                </p>
+                <h3 class="montserrat-bold">About IGF:</h3>
+                <p class="montserrat-regular">
+                    The United Nations Internet Governance Forum (IGF) serves to bring people together from various stakeholder groups in discussions on digital public policy.
+                </p>
+            </div> 
+        </div>
+        <!-- Newsletter Section -->
+        <div class="newsletter">
+            <iframe src="https://aisquare.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AiSquare. All rights reserved.</p>
+            <p>Follow us on <a href="#">Social Media</a></p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
