@@ -177,4 +177,58 @@ var words = [
   }
   
   type(); // Start the typing effect
+
+
+  const titles = [
+    "SUPERCHARGE <br> GROWTH",
+    "LEARN NEW <br> SKILLS",
+    "SUCCEED <br> WITH AI"
+  ];
   
+  let currentIndex = 0;
+  const titlesWrapper = document.getElementById("titles-wrapper");
+  let isAnimating = false; // Prevent animation overlap
+  
+  // Function to update titles
+  function updateTitles(direction) {
+    if (isAnimating) return; // Ignore if an animation is already in progress
+    isAnimating = true;
+  
+    // Calculate the new index
+    if (direction === "down" && currentIndex < titles.length - 1) {
+      currentIndex++;
+    } else if (direction === "up" && currentIndex > 0) {
+      currentIndex--;
+    }
+  
+    // Clear all existing titles
+    titlesWrapper.innerHTML = "";
+  
+    // Add titles up to the current index
+    for (let i = 0; i <= currentIndex; i++) {
+      const titleElement = document.createElement("div");
+      titleElement.className = "title";
+      titleElement.innerHTML = titles[i];
+      titlesWrapper.appendChild(titleElement);
+    }
+  
+    // Allow the animation to complete before enabling new scroll
+    setTimeout(() => {
+      isAnimating = false;
+    }, 30); // Match this to the CSS animation duration (1 second)
+  }
+  
+  // Scroll event listener
+let isScrolling = false; // Prevent multiple triggers
+document.addEventListener("wheel", (event) => {
+  if (isScrolling) return; // Skip if already processing
+  isScrolling = true;
+
+  const direction = event.deltaY > 0 ? "down" : "up";
+  updateTitles(direction);
+
+  // Allow new scroll event after a short delay
+  setTimeout(() => {
+    isScrolling = false;
+  }, 500); // Matches the CSS transition duration
+});
