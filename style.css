@@ -6,34 +6,52 @@ html {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 .header {
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    height: 50px;
+  height: 50px;
 }
 
 .nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .nav-link {
-    color: #020B15;
-    text-decoration: none;
-    font-weight: normal;
+  color: #020B15;
+  text-decoration: none;
+  font-weight: normal;
 }
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
 
+  .nav-links {
+      flex-direction: column;
+      gap: 2rem; /* Increased the gap for more vertical spacing */
+      margin-top: 1rem; /* Optional: Add some top margin */
+      margin-bottom: 1rem; /* Optional: Add some bottom margin */
+  }
+
+  .btn-primary {
+      width: 100%; 
+      text-align: center;
+  }
+}
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -67,56 +85,63 @@ html {
 }
 
 .hero {
-    min-height: 100vh;
-    background-image: url('bg.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
+  min-height: 100vh;
+  background-image: url('ais_banner.notext.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
 }
-  
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(10,37,64,0.85) 0%, rgba(36,78,119,0.85) 100%); /* Adds a dark overlay */
-    z-index: 1;
-  }
-
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(10,37,64,0.85) 0%, rgba(36,78,119,0.85) 100%);
+  z-index: 1;
+}
 
 .hero-content {
-    max-width: 1200px;
-    display: flex;
-    margin: 0 auto;
-    padding: 2rem;
-    z-index: 2;
-    transition: opacity 0.5s ease;
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  z-index: 2;
+  transition: opacity 0.5s ease;
 }
 
 .left-content {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    overflow: hidden; /* Hide overflowing text */
-    /* height: 150px; /* Adjust height based on visible titles */
-    position: relative;
-  }
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden; /* Hide overflowing text */
+  /* height: 150px; /* Adjust height based on visible titles */
+  position: relative;
+}
 
-  .right-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+  /* Left and Right content adjustments */
+.left-content, .right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
   .titles-wrapper {
     position: relative;
@@ -124,6 +149,7 @@ html {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    text-align: left; /* or center, if you prefer */
   }
 
 .title {
@@ -133,7 +159,12 @@ html {
     transform: translateY(0);
     transition: transform 1s ease, opacity 1s ease;
 }
-
+#dynamic-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
 .title.hidden {
     opacity: 0;
   }
@@ -146,8 +177,44 @@ html {
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+
+  .title {
+      font-size: 2rem;
+  }
+
+  #dynamic-text {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+      justify-content: center;
+  }
+  .left-content {
+    align-items: center;
+    text-align: center;
+}
+
+.titles-wrapper {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 0 auto;
+    display: inline-block; /* Ensures proper centering if needed */
+}
 }
 
 .hook-section {
@@ -479,7 +546,7 @@ to {
   .our-story-section {
     padding: 50px;
     text-align: center;
-    background-image: url('bg.png');
+    background-image: url('ais_banner.notext.png');
     position: relative;
     color: #ffffff;
     background-size: cover;
