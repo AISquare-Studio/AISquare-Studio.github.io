@@ -86,7 +86,7 @@ html {
 
 .hero {
   min-height: 100vh;
-  background-image: url('bg.png');
+  background-image: url('ais_banner.notext.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -546,7 +546,7 @@ to {
   .our-story-section {
     padding: 50px;
     text-align: center;
-    background-image: url('bg.png');
+    background-image: url('ais_banner.notext.png');
     position: relative;
     color: #ffffff;
     background-size: cover;
