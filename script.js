@@ -24,7 +24,7 @@ $(document).ready(function() {
 
         if (distance < 0) {
             clearInterval(updateInterval);
-            countdownElement.html("EXPIRED");
+            countdownElement.html(`Inviting Devs Worldwide`);
         }
     }
     
