@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     function updateCountdown() {
         const countdownElement = $('#countdown');
-        const targetDate = new Date('January 1, 2025 00:00:00').getTime();
+        const targetDate = new Date('March 3, 2025 00:00:00').getTime();
         const now = new Date().getTime();
         const distance = targetDate - now;
 
